@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap');
+:root {
+    --font: 16px;
+    --fontFamily: 'Poppins', sans-serif;
+    --blue: #003568;
+    --lightblue: #92e0f9;
+    --grey: #20333b;
+    --red: #ff5a57;
+    --lightGrey: #def2fa;
+    --white: #fff;
+    --transition: .6s ease;
+    --padding: 60px 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: var(--fontFamily);
+    font-size: var(--font);
+    color: var(--grey);
+    font-weight: 300;
+}
+h2 {
+    font-size: 3rem;
+    color: var(--blue);
+}
+
+h2:after {
+    display: block;
+    content: "";
+    width: 100px;
+    height: 5px;
+    background: var(--blue);
+    margin: 10px 0 30px 0;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    transition: var(--transition);
+}
+
+.container {
+    max-width: 1140px;
+    margin: auto;
+}
+
+/*******************************************************************************************
+********************************************************************************************
+********************************************************************************************
+                                    N A V I G A T I O N 
+********************************************************************************************
+********************************************************************************************
+********************************************************************************************/
+
+nav {
+    background: var(--lightGrey);
+    padding: 5px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 30px;
+}
+
+nav ul li a {
+    font-size: 1.3rem;
+    color: var(--grey);
+}
+
+nav ul li a:hover {
+    color: var(--red);
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--red);
+}
+
+.logo:hover {
+    color: var(--grey);
+}
+
+.stickyadd {
+    box-shadow: 0 2px 10px 5px rgba(0, 0, 0, .5);
+    transition: var(--transition);
+    padding: 0;
+}
+hr {
+    display: block;
+    content: "";
+    border: none;
+    height: 5px;
+    background: linear-gradient(45deg, var(--red), var(--blue));
+}
+/*******************************************************************************************
+********************************************************************************************
+********************************************************************************************
+                                    H E A D E R
+********************************************************************************************
+********************************************************************************************
+********************************************************************************************/
+
+.mainHeader {
+    padding: 150px 0 200px 0;
+    background: linear-gradient(45deg , var(--red), var(--lightGrey), var(--lightblue));
+    clip-path: polygon(0 1%, 100% 0, 100% 85%, 0 100%);
+}
+
+.mainHeader .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.mainHeader article:first-child{
+    flex: 0 0 50%;
+}
+
+.mainHeader article:last-child{
+    flex: 0 0 40%;
+}
+.mainHeader article img {
+    width: 80%;
+}
+
+button {
+    padding: 15px;
+    border: 3px solid var(--white);
+    background: transparent;
+    cursor: pointer;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-top: 20px;
+    color: var(--white);
+}
+
+button:hover {
+    background: var(--white);
+    color: var(--grey);
+    transition: var(--transition);
+}
+
+.mainHeader p {
+    font-size: 1.2rem;
+    color: var(--white);
+    text-shadow: 1px 3px 20px var(--grey);
+}
+
+/*******************************************************************************************
+********************************************************************************************
+********************************************************************************************
+                                    T I P K A J U C I N A S L O V
+********************************************************************************************
+********************************************************************************************
+********************************************************************************************/
+
+.tipkajucinaslov {
+    color: var(--bela);
+    text-shadow: 0 0 1px var(--grey);
+    font-size: 2rem;
+    letter-spacing: 3px;
+    font-weight: 700;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.tipkajucinaslov::after {
+    content: "";
+    width: 5px;
+    height: 2rem;
+    background: var(--blue);
+    position: absolute;
+    top: 10px;
+    animation: blinkanje 1s 5s infinite;
+}
+
+@keyframes blinkanje {
+    0% {
+        background: var(--bela);
+    }
+
+    50% {
+        background: transparent;
+    }
+
+    100% {
+        background: var(--bela);
+    }
+}
+
+/*******************************************************************************************
+********************************************************************************************
+********************************************************************************************
+                                    A B O U T   U S
+********************************************************************************************
+********************************************************************************************
+********************************************************************************************/
+
+#onama {
+    padding: var(--padding);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#onama img {
+   width: 100%;
+}
+
+#onama article:first-child {
+    flex: 0 0 58%;
+}
+
+#onama article:last-child {
+    flex: 0 0 38%;
+}
+
+#onama article button {
+    padding: 15px;
+    border: none;
+    background: var(--red);
+    cursor: pointer;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-top: 20px;
+    color: var(--white);
+}
+
+ #onama article button:hover {
+    background: var(--white);
+    color: var(--blue);
+    transition: var(--transition);
+    border: 3px solid var(--blue);
+}
+
+/*******************************************************************************************
+********************************************************************************************
+********************************************************************************************
+                                    U S L U G E
+********************************************************************************************
+********************************************************************************************
+********************************************************************************************/
+
+#usluge {
+    padding: var(--padding);
+    text-align: center;
+}
+
+#usluge h2 {
+    text-align: center;
+}
+
+#usluge h2::after {
+    margin: 10px auto 30px auto;
+}
+#usluge .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#usluge article {
+    flex: 0 0 30%;
+    background: var(--lightGrey);
+    border-radius: 10px;
+}
+
+#usluge article .text {
+    padding: 30px;
+}
+
+#usluge article header {
+    background: var(--blue);
+    padding: 20px; 
+    border-radius: 10px 10px 0 0;
+}
+
+#usluge article header i {
+    color: var(--white);
+    font-size: 1.7rem;
+
+}
+
+#usluge button {
+    background: #3498db;
+    background-image: -webkit-linear-gradient(top, #3498db, #44484a);
+    background-image: -moz-linear-gradient(top, #3498db, #44484a);
+    background-image: -ms-linear-gradient(top, #3498db, #44484a);
+    background-image: -o-linear-gradient(top, #3498db, #44484a);
+    background-image: linear-gradient(to bottom, #3498db, #44484a);
+    border-radius: 20px 20px 20px 0;
+    text-shadow: 1px 1px 3px #666666;
+    -webkit-box-shadow: 3px 2px 9px #666666;
+    -moz-box-shadow: 3px 2px 9px #666666;
+    box-shadow: 3px 2px 9px #666666;
+    color: #000000;
+    font-size: 15px;
+    padding: 15px;
+    border: solid #000000 3px;
+    text-decoration: none;
+  }
+  
+   #usluge button:hover {
+    background: #172833;
+    background-image: -webkit-linear-gradient(top, #172833, #3498db);
+    background-image: -moz-linear-gradient(top, #172833, #3498db);
+    background-image: -ms-linear-gradient(top, #172833, #3498db);
+    background-image: -o-linear-gradient(top, #172833, #3498db);
+    background-image: linear-gradient(to bottom, #172833, #3498db);
+    text-decoration: none;
+    transition: var(--transition);
+  }
+
+  #usluge h3 {
+      font-size: 1.5rem;
+      padding: 10px;
+  }
+
+  /*******************************************************************************************
+********************************************************************************************
+********************************************************************************************
+                                    F O O T E R
+********************************************************************************************
+********************************************************************************************
+********************************************************************************************/
+
+footer {
+    background: var(--blue);
+    padding: 180px 0 100px 0;
+    color: var(--white);
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+}
+
+footer h2 {
+    color: var(--white);
+    text-align: center;
+}
+
+footer h2::after {
+    background: var(--white);
+    margin: 20px auto 40px auto;
+}
+
+footer h2 + p {
+    font-size: 1.2rem;
+    padding: 0 0 30px 0;
+    text-align: center;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer article:first-child {
+    flex: 0 0 55%;
+}
+
+footer article:last-child {
+    flex: 0 0 35%;
+}
+
+  /*******************************************************************************************
+********************************************************************************************
+********************************************************************************************
+                                    BOttOMBAR
+********************************************************************************************
+********************************************************************************************
+********************************************************************************************/
+
+.bottombar {
+    background: var(--lightGrey);
+    padding: 15px;
+    text-align: center;
+}
+
+/*******************************************************************************************
+********************************************************************************************
+********************************************************************************************
+                                   R E S P O N S I V E
+********************************************************************************************
+********************************************************************************************
+********************************************************************************************/
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    nav {
+        position: static;
+    }
+    nav .container {
+        flex-direction: column;
+    }
+
+    .logo {
+        display: block;
+        margin: auto;
+    }
+    nav ul li {
+        margin: 0 10px;
+    }
+    .mainHeader .container article:first-child,
+    .mainHeader .container article:last-child,
+    #onama article:first-child,
+    #onama article:last-child,
+    #usluge article,
+    footer article:first-child,
+    footer article:last-child{
+        flex: 0 0 100%;
+        margin-bottom: 30px;
+    }
+    
+  
+    .mainHeader {
+        clip-path: polygon(0 1%, 100% 0, 100% 95%, 0 100%);
+    }
+
+    footer{
+        padding: 120px 0 50px 0 ;
+        clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+    }
+}
